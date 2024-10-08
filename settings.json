@@ -1,0 +1,124 @@
+{
+  "base_keymap": "VSCode",
+  "theme": "Ayu Dark",
+  "ui_font_size": 16,
+  "buffer_font_size": 18,
+  "buffer_font_family": "Zed Plex Mono",
+  "vim_mode": false,
+  "relative_line_numbers": true,
+  "tab_bar": {
+    "show": true
+  },
+  "scrollbar": {
+    "show": "never"
+  },
+  "indent_guides": {
+    "enabled": true,
+    "coloring": "indent_aware"
+  },
+  "centered_layout": {
+    "left_padding": 0.15,
+    "right_padding": 0.15
+  },
+  "assistant": {
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "gpt-4o"
+    },
+    "version": "2"
+  },
+  "language_models": {
+    "ollama": {
+      "api_url": "http://localhost:11434"
+    },
+    // Inlay hints preconfigured by Zed: Go, Rust, Typescript and Svelte
+    "inlay_hints": {
+      "enabled": true
+    },
+    "lsp": {
+      "tailwindcss-language-server": {
+        "settings": {
+          "classAttributes": ["class", "className", "ngClass", "styles"]
+        }
+      }
+    },
+    "languages": {
+      "TypeScript": {
+        "inlay_hints": {
+          "enabled": true,
+          "show_parameter_hints": false,
+          "show_other_hints": true,
+          "show_type_hints": true
+        }
+      },
+      "lsp": {
+        "rust-analyzer": {
+          "initialization_options": {
+            "inlayHints": {
+              "maxLength": null,
+              "lifetimeElisionHints": {
+                "enable": "skip_trivial",
+                "useParameterNames": true
+              },
+              "closureReturnTypeHints": {
+                "enable": "always"
+              }
+            }
+          }
+        }
+      }
+    },
+    // Use zed commit editor
+    "terminal": {
+      "env": {
+        "EDITOR": "zed --wait"
+      }
+    },
+    "file_types": {
+      "Dockerfile": ["Dockerfile", "Dockerfile.*"],
+      "JSON": ["json", "jsonc", "*.code-snippets"]
+    },
+    "file_scan_exclusions": [
+      "**/.git",
+      "**/.svn",
+      "**/.hg",
+      "**/CVS",
+      "**/.DS_Store",
+      "**/Thumbs.db",
+      "**/.classpath",
+      "**/.settings",
+      // above is default from Zed
+      "**/out",
+      "**/dist",
+      "**/.husky",
+      "**/.turbo",
+      "**/.vscode-test",
+      "**/.vscode",
+      "**/.next",
+      "**/.storybook",
+      "**/node_modules"
+    ],
+    // Turn off telemetry
+    "telemetry": {
+      "diagnostics": false,
+      "metrics": false
+    },
+    "project_panel": {
+      "button": true,
+      "dock": "left",
+      "git_status": true
+    },
+    "outline_panel": {
+      "dock": "right"
+    },
+    "collaboration_panel": {
+      "dock": "right"
+    },
+    "notification_panel": {
+      "dock": "right"
+    },
+    "chat_panel": {
+      "dock": "right"
+    }
+  }
+}
